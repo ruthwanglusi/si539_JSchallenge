@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge Two</title>
+
+    <script>
+		//Step 1: Add a JavaScript function to your page called setHomeAddress()
+	  function setHomeAddress()
+		 {
+				//Step 2: Get the Postal Address
+				let billing = document.querySelector('#bill').value;
+
+				//Step 3: Set the value for the Home Address
+				document.querySelector('#home').innerHTML=billing;
+
+				//Step 4: Disable the Home Address field
+				//Step 5: Toggling the Home Address
+				checked = document.querySelector('#useBilling').checked;
+
+				if (checked)
+				{
+					document.querySelector('#home').disabled = true;
+				}
+				else
+				{
+					document.querySelector('#home').disabled = false;
+					document.querySelector('#home').value = '';
+				}
+		 }
+    </script>
+</head>
+<body>
+	<div class="hold">
+
+
+    <h1>Challenge Two</h1>
+			</div>
+    <!-- UPDATE THE ACTION -->
+    <form action="challenge3.html">
+      <fieldset>
+        <legend>Billing Information</legend>
+        <div>
+          <label for ="billing">Billing Address:</label><br>
+          <textarea name="billAdd" id="bill"></textarea>
+        </div>
+
+        <div>
+          <label for ="home">Home Address:</label><br>
+          <input type="checkbox" name="useBilling" onclick = "setHomeAddress()" id="useBilling"> Same as above <br>
+        <textarea name="homeAdd" id="home"></textarea>
+        </div>
+        <input type = "submit" value = "Go To Challenge 3">
+      </fieldset>
+    </form>
+
+
+</body>
+
+</html>
